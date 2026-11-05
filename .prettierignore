@@ -1,0 +1,11 @@
+node_modules
+dist
+package-lock.json
+server/data
+server/uploads
+server/media
+references
+.build
+.tools
+submission
+docs/screenshots

@@ -1,0 +1,52 @@
+{
+  "name": "luma-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "web": "expo start --web --port 8081",
+    "server": "node --experimental-sqlite server/index.mjs",
+    "dev": "concurrently -k -n API,APP \"npm run server\" \"npm run web\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-sqlite --test server/tests/*.test.mjs",
+    "build:web": "expo export --platform web",
+    "media:download": "node scripts/download-catalog.mjs",
+    "media:prepare": "node scripts/prepare-catalog.mjs",
+    "phone:setup": "node scripts/setup-phone.mjs",
+    "test:e2e": "node scripts/smoke.mjs",
+    "format": "prettier --write App.tsx src server/*.mjs server/tests scripts *.json docs/*.md README.md",
+    "format:check": "prettier --check App.tsx src server/*.mjs server/tests scripts *.json docs/*.md README.md"
+  },
+  "dependencies": {
+    "@expo-google-fonts/inter": "^0.4.2",
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "cors": "^2.8.5",
+    "expo": "~55.0.32",
+    "expo-constants": "~55.0.17",
+    "expo-font": "~55.0.8",
+    "expo-image-picker": "~55.0.24",
+    "expo-linear-gradient": "~55.0.18",
+    "expo-secure-store": "~55.0.18",
+    "expo-status-bar": "~55.0.6",
+    "expo-video": "~55.0.21",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.10",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-web": "^0.21.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/react": "~19.2.2",
+    "concurrently": "^9.2.0",
+    "prettier": "^3.9.10",
+    "qrcode": "^1.5.4",
+    "typescript": "~5.9.2"
+  }
+}

@@ -1,0 +1,48 @@
+export type User = {
+  id: string;
+  name: string;
+  handle: string;
+  avatar: string;
+  bio: string;
+  following?: boolean;
+  followers?: number;
+  followingCount?: number;
+  totalLikes?: number;
+  totalViews?: number;
+};
+export type Video = {
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  topic: string;
+  poster: string;
+  url: string;
+  music: string;
+  filter: 'original' | 'warm' | 'mono';
+  visibility: 'public' | 'private';
+  comments_enabled: number;
+  views: number;
+  created_at: string;
+  name: string;
+  handle: string;
+  avatar: string;
+  likes: number;
+  comments: number;
+  liked: number;
+  saved: number;
+  source_url?: string;
+  source_author?: string;
+  duration_seconds?: number;
+};
+export type Comment = {
+  id: string;
+  body: string;
+  name: string;
+  avatar: string;
+  created_at: string;
+};
+export type WatchProgress = { position: number; duration: number };
+export type HistoryVideo = Video & WatchProgress & { watched_at: string };
+export type Tab = 'home' | 'explore' | 'create' | 'following' | 'profile';
+export const TOPICS = ['Tất cả', 'Du lịch', 'Đời sống', 'Sáng tạo', 'Thể thao', 'Ẩm thực'];

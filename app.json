@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Luma",
+    "slug": "luma-moments",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.luma.moments"
+    },
+    "ios": {
+      "bundleIdentifier": "com.luma.moments",
+      "supportsTablet": true
+    },
+    "web": {
+      "name": "Luma · Chạm vào cảm hứng"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Luma cần truy cập thư viện để chọn video bạn muốn chia sẻ.",
+          "cameraPermission": "Luma cần camera để quay khoảnh khắc.",
+          "microphonePermission": "Luma cần micro để ghi âm video."
+        }
+      ],
+      "expo-video",
+      "expo-secure-store",
+      "expo-font"
+    ]
+  }
+}
